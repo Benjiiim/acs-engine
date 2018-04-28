@@ -942,6 +942,8 @@ func convertAgentPoolProfileToVLabs(api *AgentPoolProfile, p *vlabs.AgentPoolPro
 	p.StorageProfile = api.StorageProfile
 	p.DiskSizesGB = []int{}
 	p.DiskSizesGB = append(p.DiskSizesGB, api.DiskSizesGB...)
+	p.PlatformUpdateDomainCount = api.PlatformUpdateDomainCount
+	p.PlatformFaultDomainCount = api.PlatformFaultDomainCount
 	p.VnetSubnetID = api.VnetSubnetID
 	p.SetSubnet(api.Subnet)
 	p.FQDN = api.FQDN

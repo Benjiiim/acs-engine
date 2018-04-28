@@ -15,6 +15,22 @@
       },
       "type": "int"
     },
+    "{{.Name}}PlatformUpdateDomainCount": {
+      "allowedValues": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20],
+      "defaultValue": 5,
+      "metadata": {
+        "description": "Specifies the number of Update Domain of the Availability Set.  This value can be from 1 to 20."
+      },
+      "type": "int"
+    },
+    "{{.Name}}PlatformFaultDomainCount": {
+      "allowedValues": [1,2,3],
+      "defaultValue": 2,
+      "metadata": {
+        "description": "Specifies the number of Fault Domain of the Availability Set.  This value can be from 1 to 3."
+      },
+      "type": "int"
+    },
 {{end}}
     "{{.Name}}VMSize": {
       {{GetAgentAllowedSizes}}

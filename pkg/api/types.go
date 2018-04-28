@@ -388,28 +388,30 @@ type Extension struct {
 
 // AgentPoolProfile represents an agent pool definition
 type AgentPoolProfile struct {
-	Name                string               `json:"name"`
-	Count               int                  `json:"count"`
-	VMSize              string               `json:"vmSize"`
-	OSDiskSizeGB        int                  `json:"osDiskSizeGB,omitempty"`
-	DNSPrefix           string               `json:"dnsPrefix,omitempty"`
-	OSType              OSType               `json:"osType,omitempty"`
-	Ports               []int                `json:"ports,omitempty"`
-	AvailabilityProfile string               `json:"availabilityProfile"`
-	StorageProfile      string               `json:"storageProfile,omitempty"`
-	DiskSizesGB         []int                `json:"diskSizesGB,omitempty"`
-	VnetSubnetID        string               `json:"vnetSubnetID,omitempty"`
-	Subnet              string               `json:"subnet"`
-	IPAddressCount      int                  `json:"ipAddressCount,omitempty"`
-	Distro              Distro               `json:"distro,omitempty"`
-	Role                AgentPoolProfileRole `json:"role,omitempty"`
+	Name                      string               `json:"name"`
+	Count                     int                  `json:"count"`
+	VMSize                    string               `json:"vmSize"`
+	OSDiskSizeGB              int                  `json:"osDiskSizeGB,omitempty"`
+	DNSPrefix                 string               `json:"dnsPrefix,omitempty"`
+	OSType                    OSType               `json:"osType,omitempty"`
+	Ports                     []int                `json:"ports,omitempty"`
+	AvailabilityProfile       string               `json:"availabilityProfile"`
+	StorageProfile            string               `json:"storageProfile,omitempty"`
+	DiskSizesGB               []int                `json:"diskSizesGB,omitempty"`
+	VnetSubnetID              string               `json:"vnetSubnetID,omitempty"`
+	Subnet                    string               `json:"subnet"`
+	IPAddressCount            int                  `json:"ipAddressCount,omitempty"`
+	Distro                    Distro               `json:"distro,omitempty"`
+	Role                      AgentPoolProfileRole `json:"role,omitempty"`
+	PlatformUpdateDomainCount []int                `json:"platformUpdateDomainCount,omitempty"`
+	PlatformFaultDomainCount  []int                `json:"platformFaultDomainCount,omitempty"`
 
-	FQDN                  string            `json:"fqdn,omitempty"`
-	CustomNodeLabels      map[string]string `json:"customNodeLabels,omitempty"`
-	PreprovisionExtension *Extension        `json:"preProvisionExtension"`
-	Extensions            []Extension       `json:"extensions"`
-	KubernetesConfig      *KubernetesConfig `json:"kubernetesConfig,omitempty"`
-	ImageRef              *ImageReference   `json:"imageReference,omitempty"`
+	FQDN                      string               `json:"fqdn,omitempty"`
+	CustomNodeLabels          map[string]string    `json:"customNodeLabels,omitempty"`
+	PreprovisionExtension     *Extension           `json:"preProvisionExtension"`
+	Extensions                []Extension          `json:"extensions"`
+	KubernetesConfig          *KubernetesConfig    `json:"kubernetesConfig,omitempty"`
+	ImageRef                  *ImageReference      `json:"imageReference,omitempty"`
 }
 
 // AgentPoolProfileRole represents an agent role

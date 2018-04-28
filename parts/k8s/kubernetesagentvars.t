@@ -13,6 +13,8 @@
 {{else}}
 {{if .IsAvailabilitySets}}
     "{{.Name}}VMNamePrefix": "[concat(variables('orchestratorName'), '-{{.Name}}-', variables('nameSuffix'), '-')]",
+    "{{.Name}}PlatformUpdateDomainCount": "[parameters('{{.Name}}PlatformUpdateDomainCount')]",
+    "{{.Name}}PlatformFaultDomainCount": "[parameters('{{.Name}}PlatformFaultDomainCount')]",
 {{else}}
     "{{.Name}}VMNamePrefix": "[concat(variables('orchestratorName'), '-{{.Name}}-', variables('nameSuffix'), '-vmss')]",
 {{end}}

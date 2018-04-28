@@ -24,6 +24,8 @@
     {{end}}
     "{{.Name}}AvailabilitySet": "[concat('{{.Name}}-availabilitySet-', variables('nameSuffix'))]",
     "{{.Name}}Offset": "[parameters('{{.Name}}Offset')]",
+    "{{.Name}}PlatformUpdateDomainCount": "[parameters('{{.Name}}PlatformUpdateDomainCount')]",
+    "{{.Name}}PlatformFaultDomainCount": "[parameters('{{.Name}}PlatformFaultDomainCount')]",
 {{else}}
     {{if .IsStorageAccount}}
     "{{.Name}}StorageAccountsCount": "[variables('maxStorageAccountsPerAgent')]",
