@@ -399,8 +399,8 @@ type AgentPoolProfile struct {
 	KubernetesConfig          *KubernetesConfig    `json:"kubernetesConfig,omitempty"`
 	ImageRef                  *ImageReference      `json:"imageReference,omitempty"`
 	Role                      AgentPoolProfileRole `json:"role,omitempty"`
-	PlatformUpdateDomainCount []int                `json:"platformUpdateDomainCount,omitempty"`
-	PlatformFaultDomainCount  []int                `json:"platformFaultDomainCount,omitempty"`
+	PlatformUpdateDomainCount int                  `json:"platformUpdateDomainCount,omitempty"`
+	PlatformFaultDomainCount  int                  `json:"platformFaultDomainCount,omitempty"`
 
 	// subnet is internal
 	subnet string

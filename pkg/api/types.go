@@ -403,8 +403,8 @@ type AgentPoolProfile struct {
 	IPAddressCount            int                  `json:"ipAddressCount,omitempty"`
 	Distro                    Distro               `json:"distro,omitempty"`
 	Role                      AgentPoolProfileRole `json:"role,omitempty"`
-	PlatformUpdateDomainCount []int                `json:"platformUpdateDomainCount,omitempty"`
-	PlatformFaultDomainCount  []int                `json:"platformFaultDomainCount,omitempty"`
+	PlatformUpdateDomainCount int                  `json:"platformUpdateDomainCount,omitempty"`
+	PlatformFaultDomainCount  int                  `json:"platformFaultDomainCount,omitempty"`
 
 	FQDN                      string               `json:"fqdn,omitempty"`
 	CustomNodeLabels          map[string]string    `json:"customNodeLabels,omitempty"`
